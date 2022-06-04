@@ -1,7 +1,7 @@
 using System;
 using System.Text.Json.Serialization;
 
-namespace Models
+namespace WhatsAppApiDotnet.Models.SendMessageTemplate
 {
     public class Language
     {
@@ -20,15 +20,17 @@ namespace Models
 
     public class SendMessageTemplate
     {
-        public SendMessageTemplate() {
-            this.MessagingProduct = "whatsapp";
-            this.Type = "template";
+        public SendMessageTemplate()
+        {
+            MessagingProduct = "whatsapp";
+            Type = "template";
 
-            this.Template = new Template {
-                Language = new Language { Code = "en_US"}
+            Template = new Template
+            {
+                Language = new Language { Code = "en_US" }
             };
         }
-        
+
         [JsonPropertyName("messaging_product")]
         public string MessagingProduct { get; set; }
 

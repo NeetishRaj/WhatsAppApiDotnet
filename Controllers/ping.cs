@@ -1,21 +1,18 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Models;
 
-namespace Controllers
+namespace WhatsAppApiDotnet.Controllers.Ping
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("ping")]
     public class PingController : ControllerBase
     {
-
         public PingController()
         {
         }
 
         [HttpGet]
-        public Object Get()
+        public object Get()
         {
             return Ok("API is live and responsive!");
         }

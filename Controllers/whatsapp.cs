@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Models;
+using WhatsAppApiDotnet.Models.SendMessageTemplate;
+using WhatsAppApiDotnet.Models.SendTextMessage;
+using WhatsAppApiDotnet.Models.WhatsAppConfig;
 
-namespace WhatsAppApiDotnet.Controllers
+namespace WhatsAppApiDotnet.Controllers.Whatsapp
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("whatsapp")]
     public class WhatsAppController : ControllerBase
     {
         static readonly HttpClient client = new HttpClient();

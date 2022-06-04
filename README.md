@@ -12,4 +12,8 @@ You will receive a test WhatsApp number to send info to upto 5 contacts.
 
 4. Sending messages using templates is straight forward but sending direct text messages requires a message from the user.
 
+5. Setting up webhooks
+https://developers.facebook.com/docs/graph-api/webhooks/getting-started#configure-webhooks-product
+
+
 

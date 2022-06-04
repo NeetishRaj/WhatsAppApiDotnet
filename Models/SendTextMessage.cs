@@ -1,7 +1,7 @@
 using System;
 using System.Text.Json.Serialization;
 
-namespace Models
+namespace WhatsAppApiDotnet.Models.SendTextMessage
 {
     public class Text
     {
@@ -13,11 +13,11 @@ namespace Models
     {
         public SendTextMessage()
         {
-            this.MessagingProduct = "whatsapp";
-            this.PreviewUrl = false;
-            this.RecipientType = "individual";
-            this.Type = "text";
-            this.Text = new Text();
+            MessagingProduct = "whatsapp";
+            PreviewUrl = false;
+            RecipientType = "individual";
+            Type = "text";
+            Text = new Text();
         }
 
         [JsonPropertyName("messaging_product")]
