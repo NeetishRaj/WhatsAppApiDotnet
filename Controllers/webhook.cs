@@ -1,7 +1,8 @@
 using System;
-using System.Net.Http;
-using System.Text;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,15 @@ namespace WhatsAppApiDotnet.Controllers.Webhook
             _configuration = configuration;
             _waConfig = new WhatsAppConfig();
             _configuration.GetSection("WhatsApp").Bind(_waConfig);
+
+            // Setup the HttpClient headers
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", _waConfig.AccessToken);
+            client
+                .DefaultRequestHeaders
+                .Accept
+                .Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         [HttpGet]
