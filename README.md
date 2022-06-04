@@ -32,3 +32,6 @@ dotnet run
 ### Webhook setup
 In order to test the Webhook feature, this API needs ot be hosted somewhere so that we can have callback URL to be configured in developer's console. Following these insrtuctions https://developers.facebook.com/docs/graph-api/webhooks/getting-started#configure-webhooks-product
 
+
+**Note:** The details are even well documented in their Postman collection page here https://www.postman.com/meta/workspace/whatsapp-business-platform/folder/13382743-08213e00-c6d0-48a2-8be8-62247b8d29bd
+
