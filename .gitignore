@@ -1,0 +1,8 @@
+/bin
+/obj
+/.vs
+/.config
+/.vscode
+
+# To exclude development, production, staging configs.
+appsettings.*.json
